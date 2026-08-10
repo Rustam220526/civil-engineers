@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional civil engineering portfolio for Er Rustam Ali." />
+  <title>Er Rustam Ali | Civil Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Great+Vibes&family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --bg: #f7efe6;
+      --panel: #fffaf2;
+      --surface: #ffffff;
+      --ink: #12363b;
+      --muted: #56716d;
+      --accent: #0f8b82;
+      --accent-2: #f29f5c;
+      --accent-3: #7d4f2d;
+      --line: #e6dbc9;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(15, 139, 130, 0.16), transparent 28%),
+        linear-gradient(135deg, #fcf8f1 0%, var(--bg) 100%);
+      color: var(--ink);
+      font-family: "Manrope", Arial, sans-serif;
+      font-weight: 500;
+      line-height: 1.75;
+      letter-spacing: 0.01em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      color: var(--ink);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-size: clamp(1.7rem, 2.3vw, 2.4rem);
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 4.9vw, 4.4rem);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.45);
+    }
+
+    p, li, .about-text, .knowledge-list span, .software-list span, .contact-details p, .project-meta small {
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .eyebrow, .section-label {
+      font-family: "DM Mono", monospace;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+
+    .brand, .main-nav a, .text-link, .button-primary, .signup-link, .login-link {
+      font-family: "Manrope", Arial, sans-serif;
+    }
+
+    .brand {
+      color: var(--accent-3);
+    }
+
+    .text-link {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .hero-intro {
+      color: #4c655e;
+      font-size: 1.03rem;
+    }
+
+    .site-header {
+      background: rgba(255, 250, 242, 0.86);
+      border: 1px solid rgba(18, 54, 59, 0.12);
+      box-shadow: 0 16px 40px rgba(17, 54, 59, 0.08);
+    }
+
+    .brand,
+    .main-nav a,
+    .text-link,
+    .button-primary,
+    .signup-link,
+    .login-link {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .hero {
+      position: relative;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-signature {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 7px;
+      margin: 0 0 18px;
+    }
+
+    .signature-badge {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(15, 139, 130, 0.12);
+      color: var(--accent);
+      font: 700 11px/1 "DM Mono", monospace;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .signature-name {
+      margin: 0;
+      font-family: "Great Vibes", "Brush Script MT", cursive;
+      font-size: 2rem;
+      color: var(--accent-3);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h1 em {
+      color: var(--accent);
+    }
+
+    .hero-intro {
+      max-width: 560px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      color: #fff;
+      border-radius: 999px;
+      box-shadow: 0 12px 28px rgba(15, 139, 130, 0.2);
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(15, 139, 130, 0.25);
+    }
+
+    .button-primary span {
+      margin-left: 6px;
+    }
+
+    .hero-visual {
+      border-radius: 30px;
+      padding: 24px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(255, 248, 236, 0.92));
+      border: 1px solid rgba(17, 54, 59, 0.08);
+      box-shadow: 0 20px 45px rgba(18, 54, 59, 0.08);
+    }
+
+    .profile-placeholder {
+      background: linear-gradient(135deg, rgba(15, 139, 130, 0.18), rgba(242, 159, 92, 0.2));
+      border: 1px solid rgba(17, 54, 59, 0.08);
+      color: var(--ink);
+    }
+
+    .experience-stamp {
+      background: var(--ink);
+      color: #fef9f2;
+    }
+
+    .stats-strip {
+      background: rgba(255, 250, 242, 0.8);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 10px 28px rgba(18, 54, 59, 0.05);
+    }
+
+    .about-content h2 em,
+    .expertise-heading h2 em,
+    .experience-layout h2 em,
+    .project-card h2 em,
+    .technical h2 em,
+    .software-wrap h2 em,
+    .contact-grid h2 em {
+      color: var(--accent);
+    }
+
+    .expertise-grid article,
+    .experience-card,
+    .project-card,
+    .qualification-row,
+    .publication-row,
+    .contact-details,
+    .software-wrap {
+      background: rgba(255, 250, 242, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 14px 35px rgba(18, 54, 59, 0.06);
+    }
+
+    .dark-section {
+      background: linear-gradient(135deg, #153b43 0%, #255b61 100%);
+      border-radius: 32px;
+      box-shadow: 0 18px 45px rgba(17, 54, 59, 0.16);
+    }
+
+    .section-label {
+      color: var(--accent);
+    }
+
+    .section-label.light {
+      color: #dce9e7;
+    }
+
+    .contact-section {
+      background: linear-gradient(135deg, #102d39 0%, #19424b 100%);
+      color: #f6f2ea;
+      border-radius: 32px;
+      box-shadow: 0 18px 45px rgba(17, 54, 59, 0.16);
+    }
+
+    .contact-section p,
+    .contact-section a,
+    .contact-section .brand {
+      color: #f8f2e8;
+    }
+
+    .contact-section .brand,
+    .contact-section a,
+    .contact-section p,
+    .contact-section footer {
+      color: #f6f2ea;
+    }
+
+    .footer-signature {
+      margin-top: 8px;
+      font-family: "Great Vibes", "Brush Script MT", cursive;
+      font-size: 1.35rem;
+      color: #f7c48c;
+    }
+
+    @media (max-width: 700px) {
+      .signature-name {
+        font-size: 1.6rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        order: -1;
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Home"><span>CE</span> Er Rustam Ali</a>
+    <button class="menu-button" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="auth-actions" aria-label="Account actions">
+      <button class="login-link open-auth" type="button" data-auth-form="login">Log in</button>
+      <button class="signup-link open-auth" type="button" data-auth-form="signup">Sign up <span>↗</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Civil Engineer &nbsp;•&nbsp; Delhi, India</p>
+        <div class="hero-signature">
+          <span class="signature-badge">Crafted with precision</span>
+          <p class="signature-name">Er. Rustam Ali</p>
+        </div>
+        <h1>Engineering quality.<br /><em>Building excellence.</em></h1>
+        <p class="hero-intro">Delivering building construction projects with precision, practical expertise and disciplined technical management.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#contact">Get in touch <span>↗</span></a><a class="text-link" href="#projects">View selected work <span>↓</span></a></div>
+      </div>
+      <div class="hero-visual" aria-label="Civil engineering profile placeholder">
+        <div class="grid-lines"></div>
+        <div class="profile-placeholder"><span>Professional<br />Photograph</span><small>Replace with your image</small></div>
+        <div class="experience-stamp"><strong>10</strong><span>Years of<br />experience</span></div>
+        <p class="drawing-label">STRUCTURAL PRECISION<br /><span>EST. 2016</span></p>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Professional overview">
+      <div><strong>10</strong><span>Years of practical<br />experience</span></div>
+      <div><strong>01</strong><span>Major project<br />highlighted</span></div>
+      <div><strong>CPWD</strong><span>Procedures &amp; technical<br />standards knowledge</span></div>
+      <div><strong>Delhi</strong><span>Professional<br />location</span></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="section-label"><span>01</span> ABOUT ME</div>
+      <div class="about-content">
+        <h2>A practical approach to <em>complex construction.</em></h2>
+        <div class="about-text"><p>I am a Civil Engineer with 10 years of professional experience across building construction, detailed estimation, site execution, project coordination and technical documentation. My work combines engineering accuracy with an on-ground understanding of construction delivery.</p><p>Experienced in preparing BOQs, cost estimates, rate analyses and project documentation, I bring a structured approach to monitoring quality, progress and compliance throughout the project lifecycle.</p><a class="text-link" href="#experience">My professional journey <span>↓</span></a></div>
+      </div>
+    </section>
+
+    <section class="dark-section section" id="expertise">
+      <div class="section-label light"><span>02</span> CORE EXPERTISE</div>
+      <div class="expertise-heading"><h2>Technical strength,<br /><em>delivered on site.</em></h2><p>A broad construction skillset grounded in careful planning, measurable quantities and execution discipline.</p></div>
+      <div class="expertise-grid">
+        <article><span class="card-number">01</span><h3>Estimation &amp; Costing</h3><p>Detailed estimates, BOQs, cost estimates, DSR and analysis of rates.</p></article>
+        <article><span class="card-number">02</span><h3>Construction Execution</h3><p>Site supervision, construction management, monitoring and coordination.</p></article>
+        <article><span class="card-number">03</span><h3>Quantity &amp; Billing</h3><p>Quantity surveying, measurement support and project billing documentation.</p></article>
+        <article><span class="card-number">04</span><h3>Planning &amp; Drafting</h3><p>Architectural drawings, building layout planning and CAD-based documentation.</p></article>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="section-label"><span>03</span> PROFESSIONAL EXPERIENCE</div>
+      <div class="experience-layout"><h2>Experience built through <em>responsibility.</em></h2><div class="experience-card"><p class="eyebrow">[2016] — Present</p><h3>Civil Engineer</h3><p class="organization">Central Public Works Department <span>(as provided)</span></p><ul><li>Support building construction through estimation, execution monitoring and technical documentation.</li><li>Prepare detailed estimates, BOQs, quantity-related documentation and rate analyses.</li><li>Coordinate site activities while monitoring project progress, quality and construction procedures.</li><li>Contribute to tendering, contract documentation and related technical project work.</li></ul><p class="note">Please replace the dates, designation wording and responsibilities with your verified employment details where needed.</p></div></div>
+    </section>
+
+    <section class="projects-section section" id="projects">
+      <div class="section-label"><span>04</span> SELECTED PROJECT</div>
+      <div class="project-card"><div class="project-image"><div class="building"><i></i><i></i><i></i><i></i><i></i><i></i></div><span>PROJECT PROFILE</span></div><div class="project-content"><p class="eyebrow">BUILDING CONSTRUCTION</p><h2>EPFO Project<br /><em>35 Storey</em></h2><p>Major project highlighted by the client. Specific role, scope, dates, value and outcomes have not been supplied and should be added after verification.</p><div class="project-meta"><div><small>LOCATION</small><strong>[PLACEHOLDER]</strong></div><div><small>ROLE / SCOPE</small><strong>[PLACEHOLDER]</strong></div></div><a class="text-link" href="#contact">Discuss project experience <span>↗</span></a></div></div>
+    </section>
+
+    <section class="section technical">
+      <div class="section-label"><span>05</span> TECHNICAL KNOWLEDGE</div>
+      <div class="technical-grid"><div><h2>Standards, procedures<br />and <em>quality.</em></h2><p>Working knowledge applicable to government and building-construction environments.</p></div><div class="knowledge-list"><span>CPWD Works Manual</span><span>CPWD Standard Operating Procedures (SOP)</span><span>CPWD Specifications &amp; construction procedures</span><span>Quality Assurance / Quality Control</span><span>Quality Management Techniques</span><span>Tendering &amp; contract documentation</span></div></div>
+    </section>
+
+    <section class="software-section">
+      <div class="section software-wrap"><div class="section-label light"><span>06</span> SOFTWARE &amp; DOCUMENTATION</div><h2>Tools that keep projects <em>clear and coordinated.</em></h2><div class="software-list"><span>AutoCAD</span><span>MS Excel</span><span>MS Word</span><span>Web Designing</span></div></div>
+    </section>
+
+    <section class="section qualifications">
+      <div class="section-label"><span>07</span> QUALIFICATIONS</div>
+      <div class="qualification-row"><div><p class="eyebrow">ACADEMIC QUALIFICATION</p><h3>B.Tech in Civil Engineering</h3></div><span>[Institution / Year: PLACEHOLDER]</span></div>
+      <div class="publication-row"><p class="eyebrow">PROFESSIONAL DOCUMENTS / CERTIFICATIONS</p><p>No verified documents or certifications were supplied. Add approved publications, training records or certifications here.</p></div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-grid"><div><p class="eyebrow">08 &nbsp; LET’S CONNECT</p><h2>Let’s build something <em>well considered.</em></h2></div><div class="contact-details"><a href="mailto:rustam444666@gmail.com">rustam444666@gmail.com <span>↗</span></a><p>Delhi, India</p><p class="linkedin">LinkedIn: <a href="#">[Replace: rustam@exaple.com]</a></p><p class="contact-note">Please update the LinkedIn URL before publishing.</p></div></div>
+      <footer><a class="brand" href="#home"><span>CE</span> Er Rustam Ali</a><p class="footer-signature">Crafted with elegance • Er. Rustam Ali</p><p>© <span id="year"></span> Er Rustam Ali. All rights reserved.</p><a href="#home">Back to top ↑</a></footer>
+    </section>
+  </main>
+  <div class="auth-modal" id="auth-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <div class="auth-backdrop" data-close-auth></div>
+    <div class="auth-panel">
+      <button class="close-auth" type="button" aria-label="Close form" data-close-auth>×</button>
+      <div class="auth-form active" id="login-form">
+        <p class="eyebrow">MEMBER ACCESS</p>
+        <h2 id="auth-title">Welcome <em>back.</em></h2>
+        <p class="auth-copy">Log in to access your account.</p>
+        <form class="account-form" data-demo-form>
+          <label>Email address<input type="email" name="email" autocomplete="email" required placeholder="name@example.com" /></label>
+          <label>Password<input type="password" name="password" autocomplete="current-password" required placeholder="Enter your password" /></label>
+          <div class="form-options"><label class="check-label"><input type="checkbox" /> Remember me</label><a href="#">Forgot password?</a></div>
+          <button class="form-submit" type="submit">Log in <span>→</span></button>
+        </form>
+        <p class="form-switch">New here? <button type="button" data-switch-auth="signup">Create an account</button></p>
+      </div>
+      <div class="auth-form" id="signup-form">
+        <p class="eyebrow">CREATE AN ACCOUNT</p>
+        <h2>Join the <em>conversation.</em></h2>
+        <p class="auth-copy">Create an account to get started.</p>
+        <form class="account-form" data-demo-form>
+          <label>Full name<input type="text" name="name" autocomplete="name" required placeholder="Your full name" /></label>
+          <label>Email address<input type="email" name="email" autocomplete="email" required placeholder="name@example.com" /></label>
+          <label>Create password<input type="password" name="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters" /></label>
+          <button class="form-submit" type="submit">Create account <span>→</span></button>
+        </form>
+        <p class="form-switch">Already have an account? <button type="button" data-switch-auth="login">Log in</button></p>
+      </div>
+      <p class="demo-notice">Demo forms only — connect a secure backend before accepting account details.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
